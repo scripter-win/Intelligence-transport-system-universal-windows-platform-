@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="Analysis_System.SerachPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Analysis_System"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Frame Name="frame">
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,0">
+            <TextBlock Name="serach" Text="数据搜索" FontSize="27" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-300,0,0,200"/>
+            <AutoSuggestBox Name="serachbox" Width="800" Height="auto"  Margin="-300,344,420,344" HorizontalAlignment="Right" VerticalAlignment="Center" QueryIcon="Find" Text="Serach"  GotFocus="serachbox_GotFocus" TextChanged="serachbox_TextChanged" />
+            <Button Name="backbutton" FontFamily="Segoe MDL2 Assets" FontSize="30" Content="&#xE112;" HorizontalAlignment="Left" VerticalAlignment="Top" Click="backbutton_Click" Background="#33F7F0F0" Foreground="#FF6CAAC7"/>
+            <Button Name="serachbutton" FontFamily="Segoe MDL2 Assets" FontSize="30" Content="&#xE761;" Click="serachbutton_Click" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,340,78,338" Background="#33F1E6E6" Foreground="#FFA25555" />
+            <Frame Name="serachframe" Margin="0,200,0,0"/>
+            <Rectangle  Name="refer" Margin="0,0,0,0"/>
+        </Grid>
+    </Frame>
+</Page>

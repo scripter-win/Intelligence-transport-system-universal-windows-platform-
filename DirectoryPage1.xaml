@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Analysis_System.DirectoryPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Analysis_System"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+
+    <Grid  Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Name="refer1" Margin="100,0,0,0"/>
+        <Rectangle Name="refer2" Margin="100,0,0,0"/>
+        <Frame Name="DirectorPage" Grid.Row="0" Grid.ColumnSpan="2" Margin="100,0,0,0"/>
+
+        <SplitView Name="splitview" OpenPaneLength="160" CompactPaneLength="60" DisplayMode="CompactOverlay" PaneClosed="splitview_PaneClosed" >
+            <SplitView.Pane>
+                <ListBox SelectionChanged="ListBox_SelectionChanged" >
+                    <ListBoxItem Name="PaneOutButton">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="30" Text="&#xE700;" />
+                    </ListBoxItem>
+                    <ListBoxItem Name="serach">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="30" Text="&#xE71E;" Foreground="#FF2186EE" />
+                            <TextBlock FontSize="20" Text="搜索" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="data">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="30" Text="&#xEC26;" Foreground="#FF7E3808" />
+                            <TextBlock Text="数据" FontSize="20" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="map">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="30" Text="&#xEC43;" Foreground="#FF074F2E" />
+                            <TextBlock Text="地图" FontSize="20" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="albert">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="30" Text="&#xE998;" Foreground="#FFF59F22"/>
+                            <TextBlock FontSize="20" Text="通知" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="observe">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="30" Text="&#xEC16;" Foreground="#FF1465F3" />
+                            <TextBlock Text="监控" FontSize="20" Margin="21,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="copyright">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="30" Text="&#xE1C2;" Foreground="#FF20A0A6"/>
+                            <TextBlock FontSize="20" Text="版权" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+        </SplitView>
+        <Rectangle Fill="#FFF3F3E4"  Width="auto" Height="25" VerticalAlignment="Bottom" Grid.Row="1" />
+        <TextBlock Text="物流综合系统设计版" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,0,-25"/>
+        <Image Name="logo" Source="Assets\" Height="130" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+    </Grid>
+</Page>
